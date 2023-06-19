@@ -1,23 +1,4 @@
 
-  /*añadir animaciones en  los h2*/
-
-  @keyframes animateHeading {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  } 
-  .heading-animation {
-    text-align: center;
-    margin: 0 auto;
-  }
-  /**fin de animacion**/
-
 /* pagina principal y navbar*/
 body {
     background-color: rgb(219, 212, 197);
