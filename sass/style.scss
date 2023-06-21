@@ -1,143 +1,147 @@
-
-
 /*aplicar variables*/
 
-$cor-principal:rgb(219, 212, 197); 
+$segundocolor : black;
+$font-size: 24px;
+$cor-principal: rgb(219, 212, 197);
 $cor-productos: rgb(83, 61, 61);
 
 /* pagina principal y navbar*/
 /*nesting en body*/
 body {
-    background-color: $cor-principal;
-    margin-top: 50px;
+  background-color: $cor-principal;
+  margin-top: 50px;
 
-      .caja {
-    background-color:  $cor-principal;
+  .caja {
+    background-color: $cor-principal;
     color: $cor-productos;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
   }
-  }
-  
-  
+}
 
-  /*nesting en el navbar*/
- 
-  nav {
+/*nesting en el navbar*/
+.bg-beige {
+  background-color: $cor-principal;
+}
 
-ul {
+nav {
+
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
+
   li {
     display: inline-block;
     margin-right: 20px;
   }
+
   li:last-child {
     margin-right: 0;
   }
-  }
-  
+}
 
-  .ubicacion {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    width: 18rem;
-    margin: 10px;
-  }
-   
-  h1 {
-    font-size:xx-large;
-    text-align: center;
+
+.ubicacion {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 18rem;
+  margin: 10px;
+}
+
+h1 {
+  font-size: xx-large;
+  text-align: center;
+}
+
+/*añadir animacion en el apartado acerca de nosostros*/
+.acerca-de-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Definición de la animación */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 
-  /*añadir animacion en el apartado acerca de nosostros*/
-  .acerca-de-nosotros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-   /* Definición de la animación */
-   @keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Aplicar la animación al elemento */
 .heading-animation {
-    animation: slideIn 1s ease-in-out;
+  animation: slideIn 1s ease-in-out;
 }
-  
-  .topico {
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .topico h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .topico p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .producto-descripcion{
-  
-    background-color:$cor-principal;
-    color: $cor-productos;
-    padding: 2px;
-    
-  }
-  
-  h5{
-  
-    background-color:$cor-principal;
+
+.topico {
+  margin: 20px;
+  text-align: center;
+}
+
+.topico h2 {
+  font-size: $font-size;
+  margin-bottom: 10px;
+}
+
+.topico p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+/*extends*/
+.producto-descripcion,
+h5,
+.producto-precio {
+  @extend .topico;
+  background-color: $cor-principal;
   color: $cor-productos;
   padding: 2px;
-  }
-  .producto-precio{
-    background-color: $cor-principal;
-    color: $cor-productos;
-  }
-  #carouselExampleCaptions {
-    max-width: 600px; 
-    margin: 0 auto; 
-  }
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+.producto-precio {
+  background-color: $cor-principal;
+  color: $cor-productos;
+}
+
+#carouselExampleCaptions {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px $segundocolor;
+}
+
+// Definición del mixin //
+@mixin estilos-comunes {
   label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
-  }
+    color: $segundocolor;
   
+
   input[type="text"],
   input[type="email"],
   select,
@@ -148,7 +152,7 @@ ul {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  
+
   input[type="submit"] {
     background-color: #4caf50;
     color: #fff;
@@ -157,49 +161,52 @@ ul {
     border-radius: 4px;
     cursor: pointer;
   }
-  
+
   input[type="submit"]:hover {
     background-color: #45a049;
   }
+}
 
-  .especial {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2px;
-    border: 5px solid rgb(151, 153, 132);
-    border-radius: 10px;
-    box-sizing: border-box;
-    
-  }
-  
-  
-  
-  .opniones {
-    display: flex;
-    justify-content: space-between;
-  }
-  .review-box {
-    width: 30%;
-    border: 1px solid gray;
-    padding: 10px;
-  }  
-  /*nesting en el footer*/
-  footer {
-    background-color:  rgb(219, 212, 197);
-    padding: 20px 0;
-    .footer-container {
+// Uso del mixin en una regla CSS
+.especial {
+  @include estilos-comunes;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 6000px;
+  margin: 220 auto;
+  padding: 2px;
+  border: 5px solid rgb(151, 153, 132);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.opniones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-box {
+  width: 30%;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+footer {
+  background-color: rgb(219, 212, 197);
+  padding: 200px 200;
+  justify-content: center;
+  align-items: center;
+  height: 1000px; /* Ajusta la altura según tus necesidades */
+
+  .footer-container {
     max-width: 1200px;
-    margin: 0 auto;
-    border-top: 1px solid  rgb(203, 195, 175);
+    margin:  auto;
+    border-top: 1px solid rgb(203, 195, 175);
     padding: 10px;
     text-align: center;
-  }
-  }
-  
-  
+  }  }  }
+
