@@ -105,6 +105,7 @@ h1 {
   font-size: 16px;
   line-height: 1.5;
 }
+
 /*extends*/
 .producto-descripcion,
 h5,
@@ -124,17 +125,18 @@ h5,
   max-width: 600px;
   margin: 0 auto;
 }
-
 form {
   max-width: 400px;
   margin: 0 auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px $segundocolor;
+  box-shadow: 0 2px 5px $cor-principal;
+  margin-bottom: 2px;
 }
 
 // Definición del mixin //
+
 @mixin estilos-comunes {
   label {
     display: block;
@@ -166,6 +168,7 @@ form {
     background-color: #45a049;
   }
 }
+
 
 .especial {
   @include estilos-comunes;
@@ -200,7 +203,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px; /* Ajusta la altura según tus necesidades */
+  height: 100px;
+  /* Ajusta la altura según tus necesidades */
 
   .footer-container {
     max-width: 1200px;

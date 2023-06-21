@@ -51,10 +51,7 @@
                             <a class="nav-link" href="opinionesdelcliente.html">Opiniones del cliente</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
+                   
                 </div>
             </div>
         </div>
@@ -66,14 +63,14 @@
     
    
         <form action="procesar_compra.php" method="POST">
-          <label for="nombre">Nombre:</label>
+                      <label for="nombre">Nombre:</label><br>
           <input type="text" id="nombre" name="nombre" required><br>
       
-          <label for="email">Email:</label>
+          <label for="email">Email:</label><br>
           <input type="email" id="email" name="email" required><br>
       
-          <label for="tipo_pan">Tipo de Pan:</label>
-          <select id="tipo_pan" name="tipo_pan">
+          <label for="tipo_pan">Tipo de Pan:</label><br>
+          <select id="tipo_pan" name="tipo_pan"><br>
             <option value="pan_integral">Pan de semilla</option>
             <option value="pan_centeno">Bizcocho de naranja</option>
             <option value="pan_maiz">Galleta chocolate</option>
@@ -81,15 +78,16 @@
             <option value="pan_espelta">Pan de Espelta</option>
             <option value="pan_maiz">Pack de panes semi integrales.</option>
           </select><br>
+          <br>
       
-          <label for="cantidad">Cantidad:</label>
+          <label for="cantidad">Cantidad:</label><br>
           <input type="number" id="cantidad" name="cantidad" min="1" required><br>
       
          
 <h6>Desea el pan rebanado? </h6><br>
           <label for="radio-rebanado">Rebanado</label>
-            <input type="radio" name="contacto" value="rebanado" id="radio-rebanado">
-            <label for="radio-ssrebanado">Sin rebanar.</label>
+            <input type="radio" name="contacto" value="rebanado" id="radio-rebanado"><br>
+            <label for="radio-ssrebanado">Sin rebanar</label>
             <input type="radio" name="contacto" value="ssrebanado" id="radio-ssrebanado">
             <br>
             <br>
