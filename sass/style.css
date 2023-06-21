@@ -124,4 +124,72 @@ form {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px black;
+}
+
+.especial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1px;
+  border: 12px solid rgb(219, 212, 197);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.especial label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+.especial input[type=text],
+.especial input[type=email],
+.especial select,
+.especial input[type=number] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.especial input[type=submit] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.especial input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.opniones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-box {
+  width: 30%;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+footer {
+  background-color: rgb(219, 212, 197);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Ajusta la altura según tus necesidades */
+}
+footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgb(203, 195, 175);
+  padding: 10px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
