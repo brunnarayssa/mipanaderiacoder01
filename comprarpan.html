@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,76 +15,76 @@
 <body>
     <header>
 
-<!-- navbar -->
-<div class="caja" style="display: flex; justify-content: center;">
-    <nav class="navbar navbar-light bg-beige fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand mx-auto" href="#" style="text-align: center;">
-            Panaderia Codeer.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
+        <!-- navbar -->
+        <div class="caja" style="display: flex; justify-content: center;">
+            <nav class="navbar navbar-light bg-beige fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand mx-auto" href="#" style="text-align: center;">
+                        Panaderia Codeer.</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
 
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="nuestrosproductos.html">Nuestros Productos.</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="acercadenosotros.html">Acerca de nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="opinionesdelcliente.html">Opiniones del cliente</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nuestrosproductos.html">Nuestros Productos.</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="acercadenosotros.html">Acerca de nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="opinionesdelcliente.html">Opiniones del cliente</a>
-                        </li>
-                    </ul>
-                   
-                </div>
-            </div>
+            </nav>
+
         </div>
-    </nav>
-
-</div>
     </header>
     <main>
-    
-   
+
+
         <form action="procesar_compra.php" method="POST">
-                      <label for="nombre">Nombre:</label><br>
-          <input type="text" id="nombre" name="nombre" required><br>
-      
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required><br>
-      
-          <label for="tipo_pan">Tipo de Pan:</label><br>
-          <select id="tipo_pan" name="tipo_pan"><br>
-            <option value="pan_integral">Pan de semilla</option>
-            <option value="pan_centeno">Bizcocho de naranja</option>
-            <option value="pan_maiz">Galleta chocolate</option>
-            <option value="pan_maiz">Pan de Maíz</option>
-            <option value="pan_espelta">Pan de Espelta</option>
-            <option value="pan_maiz">Pack de panes semi integrales.</option>
-          </select><br>
-          <br>
-      
-          <label for="cantidad">Cantidad:</label><br>
-          <input type="number" id="cantidad" name="cantidad" min="1" required><br>
-      
-         
-<h6>Desea el pan rebanado? </h6><br>
-          <label for="radio-rebanado">Rebanado</label>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="tipo_pan">Tipo de Pan:</label><br>
+            <select id="tipo_pan" name="tipo_pan"><br>
+                <option value="pan_integral">Pan de semilla</option>
+                <option value="pan_centeno">Bizcocho de naranja</option>
+                <option value="pan_maiz">Galleta chocolate</option>
+                <option value="pan_maiz">Pan de Maíz</option>
+                <option value="pan_espelta">Pan de Espelta</option>
+                <option value="pan_maiz">Pack de panes semi integrales.</option>
+            </select><br>
+            <br>
+
+            <label for="cantidad">Cantidad:</label><br>
+            <input type="number" id="cantidad" name="cantidad" min="1" required><br>
+
+
+            <h6>Desea el pan rebanado? </h6><br>
+            <label for="radio-rebanado">Rebanado</label>
             <input type="radio" name="contacto" value="rebanado" id="radio-rebanado"><br>
             <label for="radio-ssrebanado">Sin rebanar</label>
             <input type="radio" name="contacto" value="ssrebanado" id="radio-ssrebanado">
@@ -93,7 +92,7 @@
             <br>
             <input type="submit" value="Comprar"><br>
         </form>
-        </main>
+    </main>
     <footer>
 
 
