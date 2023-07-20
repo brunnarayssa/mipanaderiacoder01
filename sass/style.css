@@ -1,33 +1,3 @@
-@charset "UTF-8";
-/* Estilos generales que se aplican a todas las pantallas */
-/* ... */
-
-/* Media query para pantallas de hasta 600px de ancho */
-@media only screen and (max-width: 600px) {
-  /* Estilos específicos para pantallas de hasta 600px de ancho */
-  /* Por ejemplo, puedes cambiar el tamaño de los elementos, la disposición, etc. */
-  body {
-    font-size: 14px;
-  }
-}
-
-/* Media query para pantallas de 601px a 1024px de ancho */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  /* Estilos específicos para pantallas de 601px a 1024px de ancho */
-  /* Por ejemplo, puedes ajustar la cantidad de columnas, el tamaño de las imágenes, etc. */
-  body {
-    font-size: 16px;
-  }
-}
-
-/* Media query para pantallas de 1025px de ancho en adelante */
-@media only screen and (min-width: 1025px) {
-  /* Estilos específicos para pantallas de 1025px de ancho en adelante */
-  /* Por ejemplo, puedes cambiar la distribución del contenido, el tamaño de la fuente, etc. */
-  body {
-    font-size: 18px;
-  }
-}
 
 /*aplicar variables*/
 /* pagina principal y navbar*/
@@ -63,21 +33,60 @@ nav li:last-child {
   margin-right: 0;
 }
 
-.ubicacion {
-  display: flex;
-  justify-content: center;
-}
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    .ubicacion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+        
+        .card {
+            flex-basis: calc(33.33% - 20px);
+        }
+    }
+
+/* Estilos base para las cards */
 .card {
-  width: 18rem;
-  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
 }
+
+/* Media query para pantallas medianas y grandes */
+@media screen and (min-width: 768px) {
+  .ubicacion {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Ajustar el tamaño de las cards para que se muestren en una fila */
+  .card {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+  .ubicacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajustar el tamaño de las cards para que se muestren en una columna */
+  .card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
 
 h1 {
   font-size: xx-large;
@@ -224,4 +233,4 @@ footer .footer-container {
   border-top: 1px solid rgb(203, 195, 175);
   padding: 10px;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
