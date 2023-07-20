@@ -1,4 +1,34 @@
 @charset "UTF-8";
+/* Estilos generales que se aplican a todas las pantallas */
+/* ... */
+
+/* Media query para pantallas de hasta 600px de ancho */
+@media only screen and (max-width: 600px) {
+  /* Estilos específicos para pantallas de hasta 600px de ancho */
+  /* Por ejemplo, puedes cambiar el tamaño de los elementos, la disposición, etc. */
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Media query para pantallas de 601px a 1024px de ancho */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Estilos específicos para pantallas de 601px a 1024px de ancho */
+  /* Por ejemplo, puedes ajustar la cantidad de columnas, el tamaño de las imágenes, etc. */
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Media query para pantallas de 1025px de ancho en adelante */
+@media only screen and (min-width: 1025px) {
+  /* Estilos específicos para pantallas de 1025px de ancho en adelante */
+  /* Por ejemplo, puedes cambiar la distribución del contenido, el tamaño de la fuente, etc. */
+  body {
+    font-size: 18px;
+  }
+}
+
 /*aplicar variables*/
 /* pagina principal y navbar*/
 /*nesting en body*/
